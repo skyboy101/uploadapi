@@ -30,8 +30,8 @@ public class UploadFileController {
     @PostMapping("/api/v1/upload")
     public ResponseEntity<?> uploadFile(
             @RequestParam("file") MultipartFile uploadfile,
-            @RequestParam("code") String code,
-            @RequestParam("description") String description)
+            @RequestParam(value ="code",  defaultValue = "n/a") String code,
+            @RequestParam(value = "description", defaultValue = "n/a") String description)
 
     {
         FileMetaData fileMetaData;
